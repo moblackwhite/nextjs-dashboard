@@ -5,6 +5,7 @@ import {
   AtSymbolIcon,
   KeyIcon,
   ExclamationCircleIcon,
+  InformationCircleIcon
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
@@ -71,6 +72,23 @@ export default function LoginForm() {
         <Button className="mt-4 w-full" aria-disabled={isPending}>
           Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
         </Button>
+
+        {/* Test Account Information */}
+        <div className="mt-6 rounded-md bg-blue-50 p-4">
+          <div className="flex">
+            <div className="flex-shrink-0">
+              <InformationCircleIcon className="h-5 w-5 text-blue-400" aria-hidden="true" />
+            </div>
+            <div className="ml-3">
+              <h3 className="text-sm font-medium text-blue-800">Test Account</h3>
+              <div className="mt-2 text-sm text-blue-700">
+                <p>Email: user@nextmail.com</p>
+                <p>Password: 123456</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="flex h-8 items-end space-x-1">
           {errorMessage && (
             <>
